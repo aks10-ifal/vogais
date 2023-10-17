@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contagem de Vogais</title>
+</head>
+<body>
+    <h1>Contagem de Vogais</h1>
+    <p>Insira uma palavra:</p>
+<input type="text" id="inputString">
+    <button onclick="vogais()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function vogais() {
+            const inputString = document.getElementById("inputString").value;
+            const numeroDeVogais = inputString.match(/[aeiouAEIOU]/g);
+            if (numeroDeVogais === null) {
+                document.getElementById("resultado").textContent = `Número de vogais : 0`;
+            } else {
+                document.getElementById("resultado").textContent = `Número de vogais na string: ${numeroDeVogais.length}`;
+            }
+        }
+    </script>
+</body>
+</html>
